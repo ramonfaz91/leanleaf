@@ -1,18 +1,16 @@
 class PlacesController < ApplicationController
-
 	def index
-		@body_class = "places"
+		@places = Place.all
 	end
-
+	
 	def new
 		@place = Place.new
 	end
 
 	def create
 		Place.create( place_params )
-		redirect_to root_path
+		redirect_to places_path
 	end
-
 
 	private
 

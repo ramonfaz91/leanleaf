@@ -1,13 +1,13 @@
-<% @posts.each do |post| %>
+<% @farmers.each do |farmer| %>
 	<div class="genie-box text-center col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-1">
 
 		<h1>
-			<%= post.title %>
+			<%= farmer.title %>
 		</h1>
 
-		<%= image_tag post.image, :class => 'img-responsive' %>
+		<%= image_tag farmer.image, :class => 'img-responsive' %>
 
-		<h3> Description: </h3> <%= post.description %>
+		<h3> Description: </h3> <%= farmer.description %>
 
 	</div>
 
