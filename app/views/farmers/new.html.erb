@@ -1,0 +1,26 @@
+<div class="genie-box col-xs-6 col-xs-offset-3 text-center">
+
+<h2>
+	Farmer Sign Up
+</h2>
+
+<br/>
+<br/>
+
+	<%= simple_form_for @farmer do |f| %>
+		
+		<%= f.input :title, label: 'Farm Name:', placeholder: 'Lean Leaf Farms, John The Farmers, etc' %>
+	</br>
+
+		<%= f.input :description, label: 'Farm Story:', placeholder: 'This is the story of a Monkey the banana maker.' %>
+	</br>
+
+	<%= f.input :image%>
+	</br>
+
+		<%= f.button :submit, :class => 'btn btn-warning' %>
+	</br>
+
+	<% end %>
+
+</div>

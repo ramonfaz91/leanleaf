@@ -5,6 +5,8 @@ Leanleaf::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'static_pages#index'
   resources :places
+  resources :users
+  resources :farmers
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

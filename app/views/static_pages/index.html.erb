@@ -1,4 +1,13 @@
-<h1> The Last Place </h2>
+<div class="see-box col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 text-center">
+  <h1>
+  Lean Leaf
+  </h1>
+
+  <%= link_to 'Farmer Sign Up', farmers_path, :class => 'btn btn-warning' %>
+
+</div>
+
+  <br>
 
 	<%= @place.address %>
 
@@ -8,24 +17,25 @@
 
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 
-<script>
-function initialize() {
-  var myLatlng = new google.maps.LatLng(<%= @place.latitude %>, <%= @place.longitude %>);
-  var mapOptions = {
-    zoom: 4,
-    center: myLatlng
-  }
-  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+  <script>
+    function initialize() {
+      var myLatlng = new google.maps.LatLng(<%= @place.latitude %>, <%= @place.longitude %>);
+      var mapOptions = {
+        zoom: 4,
+        center: myLatlng
+      }
 
-  var marker = new google.maps.Marker({
-      position: myLatlng,
-      map: map,
-      title: 'Hello World!'
-  });
-}
+      var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-google.maps.event.addDomListener(window, 'load', initialize);
+      var marker = new google.maps.Marker({
+          position: myLatlng,
+          map: map,
+          title: 'Hello World!'
+      });
+    }
 
-    </script>
+    google.maps.event.addDomListener(window, 'load', initialize);
 
-    <div id="map-canvas"></div>
+  </script>
+
+      <div id="map-canvas"></div>
